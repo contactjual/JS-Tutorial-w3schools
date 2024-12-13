@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script practice</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+        }
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(57, 56, 56);
+        }
+        button:active {
+            transform: scale(1.02);
+        }
+        </style>
+</head>
+<body>
+    <h2 id="1">Change inner HTML by inline JS</h2>
+    <button onclick="document.getElementById('1').innerHTML='Hi, am changed'">Click me to action</button>
+
+    <h2 id="2">Change src (source) link</h2>
+    <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulbon.gif'">Click to Active</button>
+    <img id="3" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulboff.gif'">Click to Off</button>
+
+    
+
+    <script src="js-intro.js"></script>
+</body>
+</html>

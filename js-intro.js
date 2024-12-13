@@ -1,0 +1,1 @@
+const idOne = document.getElementById('1')
