@@ -22,10 +22,36 @@ if (5 == 5) {
 
 
 // Object access 
-const myObject = {firstName: 'Jual', lastName: 'Rana', age: 19};
-for (let [properties, value] of Object.entries(myObject)){
-    console.log(properties+ ': '+ value);
+const myObject = { firstName: 'Jual', lastName: 'Rana', age: 19 };
+for (let [properties, value] of Object.entries(myObject)) {
+    console.log(properties + ': ' + value);
 }
+
+
+
+// Escape Characters
+let me = "I am \'Jual\' Rana"
+console.log(me)
+
+
+// JavaScript String Methods
+let text = "HELLO WORLD, I am Jual and I am Rana";
+console.log(text.charAt(0));
+console.log(text.charCodeAt(0));
+console.log(text.slice(0, 5));
+console.log(text.substring(0, 5)); // 0 index theke start hoye 5ti okkhor nilo
+console.log(text.repeat( 2));
+console.log(text.replace('HELLO','WORLD')); // HELLO k replase korbo WORLD diye
+console.log(text.replaceAll('am', 'is'));
+
+console.log(text.indexOf('am'));
+console.log(text.search('am'));
+console.log(text.search('am'));
+console.log(text.match('am'));
+console.log(text.matchAll('am'));
+console.log(text.includes("world"));
+console.log(text.startsWith('am'));
+console.log(text.startsWith('am', 5)); // 5 no index theke start korbe
 
 
 
