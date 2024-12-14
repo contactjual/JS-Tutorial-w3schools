@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java script practice</title>
     <style>
-        body{
-            text-align: center;
-            margin: 0 auto;
+        body {
+            margin: 0;
             padding: 0;
         }
+
+        .cotainer {
+            width: 95%;
+            margin: auto;
+        }
+
+        ol {
+            font-size: 20px;
+        }
+
+        ol>li {
+            padding-bottom: 10px;
+        }
+
         button {
             padding: 10px;
             background-color: black;
@@ -18,26 +32,119 @@
             border-radius: 10px;
             font-size: 15px;
             cursor: pointer;
+            margin: auto;
         }
+
         button:hover {
             background-color: rgb(57, 56, 56);
         }
+
         button:active {
             transform: scale(1.02);
         }
-        </style>
+    </style>
 </head>
+
 <body>
-    <h2 id="1">Change inner HTML by inline JS</h2>
-    <button onclick="document.getElementById('1').innerHTML='Hi, am changed'">Click me to action</button>
+    <main class="cotainer">
+        <h1 id="1">Change inner HTML by inline JS</h1>
+        <button onclick="document.getElementById('1').innerHTML='Hi, am changed'">Click me to action</button>
 
-    <h2 id="2">Change src (source) link</h2>
-    <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulbon.gif'">Click to Active</button>
-    <img id="3" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
-    <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulboff.gif'">Click to Off</button>
+        <br><br><br>
 
-    
+        <h1 id="2">Change src (source) link</h1>
+        <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulbon.gif'">Click to
+            Active</button>
+        <img id="3" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <button onclick="document.getElementById('3').src='https://www.w3schools.com/js/pic_bulboff.gif'">Click to
+            Off</button>
+
+        <br><br><br>
+
+        <h1>JavaScript can "display" data in different ways:</h1>
+        <ol>
+            <li id="inner-html"></li>
+            <li>
+                <script>document.write('Writing into the HTML output using document.write().')</script>
+            </li>
+            <!-- <li><script>window.alert('Writing into an alert box, using window.alert().')</script></li> -->
+            <li>Writing into an alert box, using window.alert().</li>
+            <li>
+                <script>console.log('Hey show me in console in you browser')</script>Writing into the browser
+                console,
+                using console.log().
+            </li>
+        </ol>
+
+        <br>
+
+        <h1>Only 'window.print()' function can work for Machine in JS language</h1>
+        <button onclick="window.print()">Print this page</button>
+
+        <br><br><br>
+
+        <h1>JS variables</h1>
+        <ol>
+            <li>var: The var keyword was used in all JavaScript code from 1995 to 2015. This keyword should only be used in code written for older browsers.
+                <ul>
+                    <li>Only use var if you MUST support old browsers.</li>
+                </ul>
+            </li>
+            <li>const: The const keywords were added to JavaScript in 2015.
+                <ul>
+                    <li>always use const if the value or type should not be changed.</li>
+                    <li>const are not hoisted</li>
+                </ul>
+            </li>
+            <li>let: The let keywords were added to JavaScript in 2015.
+                <ul>
+                    <li>Only use let if you can't use const.</li>
+                    <li>Variables declared with let have Block Scope</li>
+                    <li>Variables declared with let must be Declared before use</li>
+                    <li>Variables declared with let cannot be Redeclared in the same scope</li> 
+                    <li>let const are not hoisted. Meaning: You can use the variable before it is declared.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <br><br><br>
+
+        <h1>Type operators</h1>
+        <ol>
+            <li>typeof: Returns the type of a variable</li>
+            <li>instanceof: Returns true if an object is an instance of an object type</li>
+        </ol>
+
+        <br><br><br>
+
+        <h1>JavaScript has 8 Datatypes</h1>
+        <ol>
+            <li>String</li>
+            <li>Number</li>
+            <li>Bigint</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>Null</li>
+            <li>Symbol</li>
+            <li>Object</li>
+        </ol>
+
+        <br><br><br>
+
+        <h1>Access object properties and value</h1>
+        <p>Check js-intro.js (24 line) file</p>
+
+        <br><br><br>
+
+        <h1>JS Event</h1>
+        <button onclick="this.innerHTML= Date()">Click me for date</button>
+        <button onmouseover = "this.style.color = 'red'; this.style.backgroundColor = 'white'">Onmouseover event</button>
+
+    </main>
+
+
 
     <script src="js-intro.js"></script>
 </body>
+
 </html>
