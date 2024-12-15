@@ -1,1 +1,3 @@
-text.match
+
+    // console.log(index);
+    // console.log(array);
