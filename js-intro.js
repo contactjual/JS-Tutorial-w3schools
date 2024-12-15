@@ -223,12 +223,41 @@ myNewArray.flatMap(function (x) {
     // console.log(x * 2)
 });
 const newFlat = myNewArray.flatMap(x => x * 2);
-console.log(newArr);
+// console.log(newArr);
 
 myNewArray.filter(function (value) {
     // console.log(value > 10);
 });
 
+const useReduce = myNewArray.reduce(reduceFunction);
+function reduceFunction(firstValue, lastValue) {
+    return firstValue + lastValue;
+}
+// console.log(useReduce);
+
+const usingEvery = myNewArray.every(everyFunction);
+function everyFunction(value) {
+    return value > 18;
+}
+// console.log(usingEvery);
+
+const usingSome = myNewArray.some(everyFunction);
+function everyFunction(value) {
+    return value > 18;
+}
+// console.log(usingSome);
+
+// console.log(Array.from('HiIamRana'));
 
 
+for (let key of myNewArray){
+    // console.log(key);
+}
+
+let entriesUse = myNewArray.entries()
+for (let key of entriesUse){
+    // console.log(key);
+}
+
+console.log(...myNewArray);
 

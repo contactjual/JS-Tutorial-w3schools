@@ -1,3 +1,3 @@
-
-    // console.log(index);
-    // console.log(array);
+for (let key of keysArray){
+    // console.log(key);
+}
