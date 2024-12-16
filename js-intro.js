@@ -497,7 +497,8 @@ console.log(mySet);
 const mySet2 = new Set(['a', 'b', 'c', 'b', 'c']);
 console.log(mySet2);
 
-console.log(mySet2.has('a')); // '.has()' like '.include()' of array
+console.log(mySet2.has('a')); // '.has()' like '.include()' of array;
+console.log(mySet2.add('D'));
 
 
 
