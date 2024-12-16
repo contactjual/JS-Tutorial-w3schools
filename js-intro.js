@@ -208,7 +208,7 @@ const myArray = ["Jual", "Rohim", "Korim", "Helim"]
 
 // Array Iteration
 let myNewArray = [45, 4, 9, 16, 25];
-console.log(myNewArray);
+// console.log(myNewArray);
 myNewArray.forEach(function (value, index, array) {
     // console.log(value);
     // console.log(index);
@@ -250,14 +250,55 @@ function everyFunction(value) {
 // console.log(Array.from('HiIamRana'));
 
 
-for (let key of myNewArray){
+for (let key of myNewArray) {
     // console.log(key);
 }
 
 let entriesUse = myNewArray.entries()
-for (let key of entriesUse){
+for (let key of entriesUse) {
     // console.log(key);
 }
 
-console.log(...myNewArray);
+// console.log(...myNewArray);
 
+
+
+
+
+
+
+
+
+
+
+// JavaScript Date Objects
+
+const date1 = new Date();
+// console.log(date1);
+
+// console.log(new Date("2015-09-25"));
+// console.log(new Date(2015, 10, 15, 12, 25, 40, 40000)); // year,month,day,hours,minutes,seconds,ms
+
+// method converts a date to a more readable format
+// date1.toDateString();
+// date1.toUTCString();
+// date1.toISOString()
+
+// date format 
+// ISO date is international date 
+// Date.parse(date1); // conveting to mili second
+
+// Get Date Methods
+// console.log(date1.getFullYear());
+// console.log(date1.getMonth());
+// console.log(date1.getDate());
+// console.log(date1.getDay());
+// console.log(date1.getHours());
+// console.log(date1.getMinutes());
+// console.log(date1.getSeconds());
+console.log(date1.getMilliseconds());
+
+// const myInterval = setInterval(function myClock() {
+//     const date1 = new Date();
+//     console.log(date1.getSeconds());
+// }, 1000)
