@@ -1,3 +1,3 @@
-l = setInterval(function myClock() {
-    console.log(date1.getSeconds());
-}, 1000)
+case q < 18:
+    //     console.log('You are addult');
+    //     break;

@@ -174,10 +174,10 @@ cars.sort(function (a, b) {
 
 
 
-// number to object
-
+// number to object and string to number
 const object = new Number(112334566789);
 // console.log(object);
+// console.log(Number("90")); // converted string to number
 
 
 
@@ -284,8 +284,8 @@ const date1 = new Date();
 // date1.toUTCString();
 // date1.toISOString()
 
-// date format 
-// ISO date is international date 
+// date format
+// ISO date is international date
 // Date.parse(date1); // conveting to mili second
 
 // Get Date Methods
@@ -296,9 +296,208 @@ const date1 = new Date();
 // console.log(date1.getHours());
 // console.log(date1.getMinutes());
 // console.log(date1.getSeconds());
-console.log(date1.getMilliseconds());
+// console.log(date1.getMilliseconds());
+// console.log(date1.getTimezoneOffset());
+// console.log(date1.setMonth(11));
 
 // const myInterval = setInterval(function myClock() {
 //     const date1 = new Date();
 //     console.log(date1.getSeconds());
-// }, 1000)
+// }, 1000);
+
+
+
+
+
+
+
+
+
+// JavaScript Math Object
+
+// console.log(Math.PI);
+// console.log(Math.random());
+// console.log(Math.ceil(2.1)); // 3
+// console.log(Math.floor(2.7)); // 2
+// console.log(Math.trunc(2.9)); // 2
+// console.log(Math.round(2.7)); // 3
+// console.log(Math.sign(2)); // +1
+// console.log(Math.sign(0)); // 0
+// console.log(Math.sign(-2)); // -1
+// console.log(Math.abs(-42)); // 42
+// console.log(Math.abs(42)); // 42
+// console.log(Math.sin(90 * Math.PI / 180)); // sin(90deg)=1
+// console.log(Math.log2(8)); // 3 karon 2 k 3bar gon korle 8 hoy
+
+// get random number betwen 2 to 10 use the common format 
+function formatRandom(max, min) {
+    console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+}
+// formatRandom(10, 2);
+
+
+
+
+
+
+// #problem-1. find how many vowel is here? used--- from() and includes()
+const vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+function countVowel() {
+    let count = 0;
+    const ItaretSentence = Array.from(mySentece);
+    ItaretSentence.forEach(function (singleAlpha) {
+        if (vowel.includes(singleAlpha)) {
+            count++;
+        }
+        else {
+            // console.log('No match')
+        }
+    });
+    return count;
+}
+const mySentece = 'I love Bangladesh'
+// console.log(countVowel(mySentece))
+
+// #problem-2. find the duplicate value in array used--- filter(), indexOf()
+const someNimbers = [2, 3, 5, 2, 6, 8, 6, 3, 5, 8];
+const findDuplicate = someNimbers.filter(function (value, index, array) {
+    return array.indexOf(value) !== index;
+});
+// console.log(findDuplicate);
+
+
+
+
+
+
+
+
+
+// turnary oparator 
+
+// if (5 > 6) {
+//     console.log('thik thik')
+// }
+// else {
+//     console.log('no no');
+// }
+
+const myturnary = (5 > 6) ? "thik thik" : "no no";
+// console.log(myturnary); 
+
+
+
+
+
+
+
+// JS condition 
+
+// switch
+// let q = 10;
+// switch (true) {
+//     case q < 18:
+//         console.log('You are addult');
+//         break;
+//     case q < 9:
+//         console.log('You are child');
+//         break;
+//     default:
+//         console.log('You middle');
+// };
+
+// switch (q) {
+//     case 0:
+//         console.log('You are addult');
+//         break;
+//     case 2:
+//         console.log('You are child');
+//         break;
+//     case 10:
+//         console.log('x er value 10');
+//         break;
+//     default:
+//         console.log('No found value');
+// };
+
+
+
+
+// loop 
+
+// for in loop for object 
+const person = { fname: "John", lname: "Doe", age: 25 };
+for (let x in person) {
+    // console.log(x)
+}
+for (let x in person) {
+    // console.log(person[x])
+}
+
+// for of loop for array
+let w = 'JualRana'
+let r = ['jual', 'rana'];
+let n = [1, 3, 4, 5, 6, 7, 8]
+for (key of w) {
+    // console.log(key);
+}
+for (key of r) {
+    // console.log(key);
+}
+for (key of n) {
+    // console.log(key);
+}
+for (key in r) {
+    // console.log(key);
+}
+
+
+
+// while loop 
+let s = 0;
+// while (s < 10) {
+//     console.log(s);
+//     s++;
+// }
+// or 
+// do {
+//     console.log(s);
+//     s++;
+// }
+// while (s < 10);
+
+
+
+
+// brack and continue
+// for (let i = 0; i < 10; i++) {
+//     if (i === 6) {
+//         break; // all loop tay skip hoyeche
+//     }
+//     console.log(i);
+// }
+// for (let i = 0; i < 10; i++) {
+//     if (i === 5) {
+//         continue; // just 5 skip hoyeche
+//     }
+//     console.log(i);
+// }
+
+
+
+
+
+
+
+// JavaScript Sets 
+
+const mySet = new Set(['a', 'b', 'c']);
+console.log(mySet);
+
+const mySet2 = new Set(['a', 'b', 'c', 'b', 'c']);
+console.log(mySet2);
+
+console.log(mySet2.has('a')); // '.has()' like '.include()' of array
+
+
+
