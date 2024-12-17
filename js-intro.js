@@ -70,7 +70,7 @@ let text = "HELLO WORLD, I am Jual and I am Rana";
 
 
 
-// NaN and numbers
+// NaN, numbers and eval()
 let a = '5';
 let b = 1;
 let c = 'Hi';
@@ -84,10 +84,10 @@ let c = 'Hi';
 
 // console.log(typeof (NaN));
 // console.log(typeof (Infinity));
+// console.log(eval("34-'2'")); // coverted to number heighly
 
 // convert number to others format
 let myDecemelNumber = 32;
-
 const convertedToOctal = myDecemelNumber.toString(8) // ami base joto dibo sei base onojayi convert hobe
 const econvertedToHexadecimal = myDecemelNumber.toString(16);
 const econvertedToBinary = myDecemelNumber.toString(2);
@@ -749,7 +749,7 @@ finally {
 const myNewObject = {
     firstName: 'Jual',
     lastName: 'Rana',
-    getFname: function(){
+    getFname: function () {
         return this.firstName; // this means myNewObject
     }
 }
@@ -760,7 +760,7 @@ const myNewObject = {
 const myOthersObject = {
     firstName: 'Jual',
     lastName: 'Rana',
-    getFname: function(){
+    getFname: function () {
         return this.hisName; // this means myOthObject
     }
 }
@@ -778,7 +778,7 @@ const myOthObject = {
 // }
 // window.addEventListener('load', arewfunc);
 
-const arewfunc = () => {
-    console.log(this); // this also means the window
-}
-document.getElementById('but').addEventListener('click', arewfunc);
+// const arewfunc = () => {
+//     console.log(this); // this also means the window
+// }
+// document.getElementById('but').addEventListener('click', arewfunc);
