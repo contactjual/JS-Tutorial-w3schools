@@ -34,7 +34,7 @@ for (let [properties, value] of Object.entries(myObject)) {
 
 
 // Escape Characters
-let me = "I am \'Jual\' Rana"
+let me = "I am \n 'Jual' Rana"
 // console.log(me)
 
 
@@ -492,13 +492,293 @@ let s = 0;
 // JavaScript Sets 
 
 const mySet = new Set(['a', 'b', 'c']);
-console.log(mySet);
+// console.log(mySet);
 
 const mySet2 = new Set(['a', 'b', 'c', 'b', 'c']);
-console.log(mySet2);
+// console.log(mySet2);
 
-console.log(mySet2.has('a')); // '.has()' like '.include()' of array;
-console.log(mySet2.add('D'));
+// console.log(mySet2.has('a')); // '.has()' like '.include()' of array;
+// console.log(mySet2.add('D'));
 
 
 
+
+
+
+
+
+
+
+
+
+// JavaScript Map Methods
+
+// const fruits = new Map([
+//     ['mango', 230],
+//     ['apple', 30],
+//     ['banana', 100]
+// ]);
+// console.log(fruits.get('mango'));
+
+const fruits = new Map();
+
+fruits.set('mango', 230)
+fruits.set('apple', 30)
+fruits.set('banana', 100)
+
+// console.log(fruits);
+// console.log(fruits.size); // Array.length
+fruits.delete('banana');
+// console.log(fruits.has('banana'));
+// fruits.clear(); // all element deleted
+
+fruits.forEach(function (value, key) {
+    // console.log('value=' + value + ' ' + 'key=' + key);
+});
+
+for (let x of fruits.entries()) {
+    // console.log(x); // ekti ekti element fully return kore
+}
+
+for (let x of fruits.values()) {
+    // console.log(x); 
+}
+
+for (let x of fruits.keys()) {
+    // console.log(x); 
+}
+
+
+
+
+
+
+
+// JavaScript typeof
+
+// console.log(typeof null); // obeject, null means nai.
+// console.log(typeof undefined); // undefine , undefine means define kora nai but memory te jayga dokol kore ache
+// console.log(typeof Array); //  function
+// console.log(typeof Object); //  function
+
+let time = new Date()
+// console.log(time instanceof Array)
+let m = [1, 3, 4]
+// console.log(m instanceof Array)
+// console.log(m instanceof Set) // false
+let h = new Set(['Jual', 'Rana']);
+// console.log(h instanceof Set) // true
+
+let myMap = new Map();
+// console.log((myMap.constructor === Array));
+// console.log((myMap.constructor === Object));
+// console.log((myMap.constructor === Map));
+// console.log((myMap.constructor.toString().indexOf('Array') > -1));
+// console.log((myMap.constructor.toString().indexOf('Map') > -1));
+
+
+
+
+
+
+
+
+
+// JavaScript Type Conversion
+
+// console.log(Number('')) // 0
+// console.log(Number('jual')) // NaN
+// console.log(parseFloat(2.334)) // 2.334
+// console.log(parseInt(2.3)) // 2 (cil er motho kaj kroe)
+// console.log((2.59678).toFixed(2)); // 2.60
+// console.log((2.59678).toPrecision(3)); // 2.60
+// console.log((123).toExponential()); // 123
+
+// console.log((123).toString()); // 123
+
+// console.log(Number(false)); // 123
+// console.log(Number(true)); // 123
+
+// number comvert to other base (number.toString(base))
+// console.log((45).toString(2)) // converted to bainary
+// console.log((0b101101).toString(10)) // converted to decimal (0b) means it's a binary number
+// console.log((0o732).toString(2)) // converted to decimal (0o) means it's a octal number
+
+
+
+
+
+
+// BigInt data type 
+// let g = BigInt('2032039438573485429857340952849033333333333333333333333333333333333333333333333333333888888888888888888888888888888888888888888888888');
+// console.log(g);
+// let p = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+// console.log(p);
+
+
+
+
+
+
+
+// JavaScript Regular Expressions
+
+let ami = 'Jual Rana is a website developer. Korim is also a developer';
+let kew = 'Jual Rana is a developer. Korim is also a developer';
+
+// console.log(ami.search('developer')); // 23 no index e koje peyeche
+// console.log(ami.search(/DeVeloPer/i)); // ekhn case-insensitive hisebe kaj korbe
+// console.log(ami.search(/developer/ig)); // global, ekoi line e akadik valo ver korbe
+// console.log(kew.search(/developer/igm)); // multi line e akadik valo ver korbe
+// console.log(ami.replace('developer', 'nothing')); 
+// console.log(ami.replace(/developer/ig, 'nothing')); 
+// let j = /e/i;
+// console.log(j.test('the last search is very bad'));
+// console.log(/E/i.exec('the last search is very bad'));
+// console.log(ami.match(/[abc]/i));
+
+
+// console.log(~5); // 5
+// console.log(2 ^ 4);
+
+
+
+
+
+
+
+
+
+
+// JavaScript Errors
+
+let num = 4;
+const show = 'I am in catch'
+
+try {
+    // console.log('I am in try');
+    // if (fetch('https://www.geeksforgeeks.or') ) throw 'This link is wrong' 
+    if (num < 5) throw 'wrong'
+}
+catch (err) {
+    // console.log(err);
+}
+finally {
+    // console.log('I am in finally')
+}
+
+
+// try {
+//     l = num + Y; throw 'I am error' // referance error
+// }
+// catch {
+//     console.log(l)
+// }
+
+// try {
+//     if (num < 5)= throw 'wrong' // sytext error
+// }
+// catch (err) {
+//     console.log(err)
+// }
+
+
+// function myfunc (){
+//     carName = 'JIX';
+//     console.log(carName);
+// }
+// myfunc()
+
+// let z = 4;
+// function myfunc() {
+//     z = 10;
+// }
+// myfunc()
+// console.log(z) // 10
+
+
+
+
+
+
+// JavaScript Hoisting
+// var, let and const are hoisted. Var can set his value as undefine and set the provided value by reaplacing undefine. But let and const can not set value as undefine fist of all.
+
+// var t;
+// t = 10; 
+// var k;
+// k = 5;  
+// console.log(t, k);
+
+// var t;
+// t = 10;
+// console.log(t, k); // k is undefine
+// var k;
+// k = 5;  
+
+// let fm;
+// fm = 4;
+// console.log(fm);
+
+// fm = 4;
+// let fm;
+// console.log(fm); // ReferenceError: Cannot access 'fm' before initialization
+
+// const gm;
+// gm = 3;
+// console.log(gm); // SyntaxError: Missing initializer in const declaration
+
+
+
+
+
+// JavaScript Use Strict
+// "use strict"; Defines that JavaScript code should be executed in "strict mode".
+
+// "use strict"; // Uncaught ReferenceError: xm is not defined
+// xm = 34;
+
+
+
+
+
+
+
+// JS this
+
+const myNewObject = {
+    firstName: 'Jual',
+    lastName: 'Rana',
+    getFname: function(){
+        return this.firstName; // this means myNewObject
+    }
+}
+// console.log(myNewObject.getFname());
+
+
+// if I control 'this' use call() or bind() function
+const myOthersObject = {
+    firstName: 'Jual',
+    lastName: 'Rana',
+    getFname: function(){
+        return this.hisName; // this means myOthObject
+    }
+}
+const myOthObject = {
+    myName: 'Jual',
+    hisName: 'Rana',
+}
+// console.log(myOthersObject.getFname.call(myOthObject));
+
+
+
+// this in arrow function 
+// const arewfunc = () => {
+//     console.log(this); // this means the window
+// }
+// window.addEventListener('load', arewfunc);
+
+const arewfunc = () => {
+    console.log(this); // this also means the window
+}
+document.getElementById('but').addEventListener('click', arewfunc);
