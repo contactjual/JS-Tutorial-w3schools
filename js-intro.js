@@ -772,7 +772,7 @@ const myOthObject = {
 
 
 
-// this in arrow function 
+// 'this' in arrow function 
 // const arewfunc = () => {
 //     console.log(this); // this means the window
 // }
@@ -782,3 +782,88 @@ const myOthObject = {
 //     console.log(this); // this also means the window
 // }
 // document.getElementById('but').addEventListener('click', arewfunc);
+
+
+
+
+
+
+
+
+
+
+
+
+// JavaScript Classes
+// JavaScript Classes are templates for JavaScript Objects. Jodi ekoi dhoroner onek golo object create korar proyojon hoy tahole js class use korbo
+// Syntax
+// class ClassName {
+//   constructor() { ... }
+// }
+
+// class myCar {    
+//     constructor (carName, modelNumber, year) {
+//         this.carName = carName;
+//         this.modelNumber = modelNumber;
+//         this.year = year;
+//     }
+//     activity () {
+//         return ('Sozuki 345i3 is starting');
+//     }
+// }
+// const car1 = new myCar('Sozuki', '345i3', 2017);
+// console.log(car1) // get a myCar object
+// const car2 = new myCar('BMW', '35i3', 2018);
+// console.log(car2) // get a myCar object
+// const car3 = new myCar('Toyota', '34i3', 2015);
+// console.log(car3) // get a myCar object
+// console.log(car3.activity()); 
+
+
+// Modules
+// JavaScript modules allow you to break up your code into separate files.
+// Modules are imported from external files with the import statement.
+
+// <script type="module">
+// import message from "./message.js";
+// </script>
+
+// import {functionName,functionName} from 'myFileLink';
+
+    
+
+
+
+
+
+
+
+// JavaScript JSON
+
+
+const myObjectJN = {
+    fName: 'Jual',
+    lName: 'Rana',
+    age: 19,
+}
+
+// console.log(myObjectJN) // normal object
+// const convertJson = JSON.stringify(myObjectJN) // converted to JSON (text)
+// console.log(convertJson)
+// console.log(JSON.parse(convertJson)) // converted again to obejct (Converting a JSON Text to a JavaScript Object)
+
+
+
+
+// JavaScript Debugging             
+
+let fnd = 'oeure';
+let dd = 'reiaw';
+let gh = 'eij';
+let num4 = 485
+
+// console.log(dd);
+// debugger // create brack point
+// console.log(num5); // num5 is not defined
+// console.log(fnd);
+// console.log(num4);
