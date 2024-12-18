@@ -1,1 +1,1 @@
-Live Link:  https://contactjual.github.io/dynamic-html-by-JavaScript/
+Live Link:  https://contactjual.github.io/JS-Tutorial-w3schools/
